@@ -35,6 +35,7 @@ final class RepositoriesWithPullRequestClosedUseCaseTest extends WordSpec with S
       val expectedRepository = RepositoryStub.chat
 
       val from = DateTime.now.minusYears(10) // From the beginning of time
+
       eventually {
         repositoriesWithPullRequestClosedUseCase
           .repositoriesWithPullRequestClosed(from, channelId)
